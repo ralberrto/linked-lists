@@ -22,6 +22,15 @@ const LinkedList = function() {
         return node;
     };
 
+    const insertAt = function(value, index) {
+        const preceding = at(index - 1);
+        const succeding = at(index);
+        const node = Node(value);
+        preceding.next = node;
+        node.next = succeding;
+        return node;
+    };
+
     const pop = function() {
         const lastIndex = size() - 1;
         const lastNode = tail();
@@ -95,6 +104,7 @@ const LinkedList = function() {
         head,
         prepend,
         append,
+        insertAt,
         pop,
         tail,
         at,
