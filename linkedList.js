@@ -80,6 +80,17 @@ const LinkedList = function() {
         return count;
     }
 
+    const toString = function() {
+        let node = head();
+        let listStringed = '';
+        while (node) {
+            listStringed += `( ${node.value} ) -> `
+            node = node.next;
+        }
+        listStringed += 'null';
+        return listStringed;
+    };
+
     return {
         head,
         prepend,
@@ -90,6 +101,7 @@ const LinkedList = function() {
         contains,
         find,
         size,
+        toString,
     };
 };
 
