@@ -31,6 +31,11 @@ const LinkedList = function() {
         return node;
     };
 
+    const at = function(index) {
+        if (index === 0) return head();
+        return at(index - 1).next;
+    };
+
     const size = function() {
         if (!_head) return 0;
         let node = _head;
@@ -47,6 +52,7 @@ const LinkedList = function() {
         prepend,
         append,
         tail,
+        at,
         size,
     };
 };
