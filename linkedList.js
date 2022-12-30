@@ -56,6 +56,19 @@ const LinkedList = function() {
         return found;
     };
 
+    const find = function(value) {
+        let node = head();
+        let count = 0;
+        while (node) {
+            if (node.value === value) {
+                return count;
+            }
+            count++;
+            node = node.next;
+        }
+        return null;
+    };
+
     const size = function() {
         if (!_head) return 0;
         let node = _head;
@@ -75,6 +88,7 @@ const LinkedList = function() {
         tail,
         at,
         contains,
+        find,
         size,
     };
 };
