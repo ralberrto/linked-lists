@@ -1,0 +1,19 @@
+{
+  "name": "linked-lists",
+  "version": "1.0.0",
+  "description": "Module with linked list and node classes",
+  "main": "linkedList.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ralberrto/linked-lists.git"
+  },
+  "author": "Rafael Alberto Larios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ralberrto/linked-lists/issues"
+  },
+  "homepage": "https://github.com/ralberrto/linked-lists#readme"
+}
