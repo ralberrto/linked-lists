@@ -101,4 +101,4 @@ const Node = function(value) {
     }
 };
 
-module.exports = { LinkedList };
+module.exports = LinkedList;
