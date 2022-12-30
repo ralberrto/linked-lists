@@ -24,10 +24,10 @@ const LinkedList = function() {
 
     const insertAt = function(value, index) {
         const preceding = at(index - 1);
-        const succeding = at(index);
+        const succeeding = at(index);
         const node = Node(value);
         preceding.next = node;
-        node.next = succeding;
+        node.next = succeeding;
         return node;
     };
 
@@ -36,6 +36,12 @@ const LinkedList = function() {
         const lastNode = tail();
         at(lastIndex - 1).next = null;
         return lastNode;
+    };
+
+    const removeAt = function(index) {
+        const preceding = at(index - 1);
+        const succeeding = at(index + 1);
+        preceding.next = succeeding;
     };
 
     const tail = function() {
@@ -106,6 +112,7 @@ const LinkedList = function() {
         append,
         insertAt,
         pop,
+        removeAt,
         tail,
         at,
         contains,
